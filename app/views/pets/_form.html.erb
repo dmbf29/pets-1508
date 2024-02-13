@@ -1,0 +1,12 @@
+<%= form_with model: @pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+  <%= f.label :species %>
+  <%= f.select :species, Pet::SPECIES, class: 'form-control' %>
+  <p></p>
+  <%= f.label :location %>
+  <%= f.text_field :location, class: 'form-control' %>
+  <%= f.label :found_on %>
+  <%= f.date_field :found_on, class: 'form-control' %>
+  <%= f.submit class: 'btn btn-success' %>
+<% end %>

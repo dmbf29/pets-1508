@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @pet.name %></h1>
+  <p><%= @pet.species %></p>
+  <p><%= @pet.location %></p>
+  <p><%= @pet.found_on.strftime('%b %d, %Y') %></p>
+  <%= link_to 'X', pet_path(@pet), class: 'btn btn-danger', data: { turbo_method: :delete, turbo_confirm: "Was #{@pet.name} returned to its owner?" } %>
+  <%= link_to 'Pets', pets_path, class: 'btn btn-success'  %>
+</div>
